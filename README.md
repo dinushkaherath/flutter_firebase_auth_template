@@ -1,9 +1,19 @@
 # firebase_auth_template
 
+This template is to bootstrap a simple flutter app with email / password login and google auth login.
+
 ## Firebase setup
 
-Go to https://console.firebase.google.com/  
-- Create a new project 
+- Go to https://console.firebase.google.com/
+- Click 'Add project' 
+- ![image](https://user-images.githubusercontent.com/448399/110998649-20be6080-834d-11eb-9f7b-32a512aab599.png)
+- Name it something. Don't overthink this, we are just playing around.
+- ![image](https://user-images.githubusercontent.com/448399/110998978-ab9f5b00-834d-11eb-97eb-7e138cfca0f4.png)
+- click Save / Continue
+- Uncheck analytics unless you care
+- click Create Project
+- After a minute click Continue and you will be in your Project Overview page where you can set up services
+
 ### Android
 - Go to project overview 
 - Add app (click on android) 
