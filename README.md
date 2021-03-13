@@ -33,7 +33,7 @@ have to have this reverse domain format, but that's a very common convention, be
 ![image](https://user-images.githubusercontent.com/448399/111000677-7e07e100-8350-11eb-8a14-1cdf01ca3672.png)
 
 - click Register App
-- Now firebase will generate a google-services.json file that you need to save in android/app, if you cloned this repo.  Make sure you don't save it in the wrong place.
+- Now firebase will generate a google-services.json file that you need to save in android/app, if you cloned this repo.  Make sure you don't save it in the wrong place. And if there already is a google-services.json file there, make sure you overwrite it.
 
 Now it gets a little tricky. Firebase is asking you to **Add Firebase SDK**.  You normally would need to add a couple lines to **two** different build.gradle files.  You can double check the two build.gradle files to make sure they have the contents that Firebase is asking you to put in them.  But in this repo, they should already have the firebase SDK additions.
 
