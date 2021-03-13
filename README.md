@@ -1,4 +1,4 @@
-# firebase_auth_template
+# flutter_firebase_auth_template
 
 This template is to bootstrap a simple flutter app with email / password login and google auth login.
 
