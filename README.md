@@ -33,18 +33,22 @@ have to have this reverse domain format, but that's a very common convention, be
 ![image](https://user-images.githubusercontent.com/448399/111000677-7e07e100-8350-11eb-8a14-1cdf01ca3672.png)
 
 - click Register App
- 
- 
+- Now firebase will generate a google-services.json file that you need to save in android/app, if you cloned this repo.  Make sure you don't save it in the wrong place.
+
+Now it gets a little tricky. Firebase is asking you to **Add Firebase SDK**.  You normally would need to add a couple lines to **two** different build.gradle files.  You can double check the two build.gradle files to make sure they have the contents that Firebase is asking you to put in them.  But in this repo, they should already have the firebase SDK additions.
+
+If you see the instructions to press "Sync now"--you can probably ignore this?  
+
+The last thing you need to do is change the **applicationId**.  This is the same as the Android package name you came up with and entered previously. It typically looks like a domain name in reverse.  "com.somedomain.appname" for example. 
+
 - go into Android/app/build.gradle file
-- look for `applicationId "com.jparrack.firebase_auth_template"`  
-- Change the domain to your name it needs to be unique 
-- paste into firebase
-- download google-services.json
-- place in android/app
-- in android/build.gradle in the dependencies block add `classpath 'com.google.gms:google-services:4.3.5'` 
-- in android/app/build.gradle add `apply plugin: 'com.google.gms.google-services'` under the last apply
-- in android/app/build.gradle add `implementation platform('com.google.firebase:firebase-bom:26.5.0')` and `implementation platform('com.google.firebase:firebase-bom:26.5.0')` in the dependencies block
+- look for `applicationId "com.jparrack.firebase_auth_template"` (just search for applicationId around line 40)   
+- Change the applicationId to match the Android package name you provided earlier. 
 - launch the android simulator and make sure you dont get any errors 
+
+
+
+
 
 ## IOS 
 - Go to project overview 
