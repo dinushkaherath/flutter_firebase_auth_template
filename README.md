@@ -46,6 +46,12 @@ The last thing you need to do is change the **applicationId**.  This is the same
 - Change the applicationId to match the Android package name you provided earlier. 
 - launch the android simulator and make sure you dont get any errors 
 
+If you get this `The number of method references in a .dex file cannot exceed 64K.` one way to solve it is to add these two lines to `android/app/build.gradle`. I'm not really sure why I had to do this.
+
+![image](https://user-images.githubusercontent.com/448399/111031047-adabfd00-83d3-11eb-8521-c7d3dde9a367.png)
+
+You should be able to run the app in an emulator or connected android device now.
+
 
 
 
