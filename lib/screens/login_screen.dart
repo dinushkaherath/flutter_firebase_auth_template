@@ -4,6 +4,7 @@ import 'package:firebase_auth_template/screens/home_screen.dart';
 import 'package:firebase_auth_template/widgets/rounded_button.dart';
 import 'package:firebase_auth_template/widgets/wave.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -115,6 +116,73 @@ class _LoginScreenState extends State<LoginScreen> {
                       final user = await _auth.signInWithEmailAndPassword(
                           email: email, password: password);
                       if (user != null) {
+                        prefs = await SharedPreferences.getInstance();
+                        var firebaseUser = _auth.currentUser;
+                        final QuerySnapshot result = await FirebaseFirestore
+                            .instance
+                            .collection('users')
+                            .where('id', isEqualTo: firebaseUser.uid)
+                            .get();
+                        final List<DocumentSnapshot> documents = result.docs;
+                        print(documents[0].data());
+                        await prefs.setString('id', documents[0].data()['id']);
+                        await prefs.setString(
+                            'nickname', documents[0].data()['nickname']);
+                        // await prefs.setString(
+                        //     'aboutMe', documents[0].data()['aboutMe']);
+                        Navigator.pushNamed(context, HomeScreen.id);
+                      }
+                      setState(() {
+                        showSpinner = false;
+                      });
+                    } catch (e) {
+                      print(e);
+                      Widget okButton = TextButton(
+                        child: Text("OK"),
+                        onPressed: () {
+                          setState(() {
+                            showSpinner = false;
+                          });
+                          Navigator.pop(context);
+                        },
+                      );
+                      // set up the AlertDialog
+                      AlertDialog alert = AlertDialog(
+                        title: Text("Invalid Credentials"),
+                        content: Text("Incorrect email or password"),
+                        actions: [
+                          okButton,
+                        ],
+                      );
+                      // show the dialog
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return alert;
+                        },
+                      );
+                    }
+                  },
+                ),
+                RoundedButton(
+                  title: 'Login with Google!',
+                  color: Colors.lightBlue,
+                  onPressed: () async {
+                    final googleSignIn = GoogleSignIn();
+                    setState(() {
+                      showSpinner = true;
+                    });
+                    try {
+                      final user = await googleSignIn.signIn();
+                      if (user != null) {
+                        print(user);
+                        final googleAuth = await user.authentication;
+
+                        final credential = GoogleAuthProvider.credential(
+                          accessToken: googleAuth.accessToken,
+                          idToken: googleAuth.idToken,
+                        );
+                        await _auth.signInWithCredential(credential);
                         prefs = await SharedPreferences.getInstance();
                         var firebaseUser = _auth.currentUser;
                         final QuerySnapshot result = await FirebaseFirestore
