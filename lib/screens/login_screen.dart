@@ -123,11 +123,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             .where('id', isEqualTo: firebaseUser.uid)
                             .get();
                         final List<DocumentSnapshot> documents = result.docs;
+                        print(documents[0].data());
                         await prefs.setString('id', documents[0].data()['id']);
                         await prefs.setString(
                             'nickname', documents[0].data()['nickname']);
-                        await prefs.setString(
-                            'aboutMe', documents[0].data()['aboutMe']);
+                        // await prefs.setString(
+                        //     'aboutMe', documents[0].data()['aboutMe']);
                         Navigator.pushNamed(context, HomeScreen.id);
                       }
                       setState(() {
