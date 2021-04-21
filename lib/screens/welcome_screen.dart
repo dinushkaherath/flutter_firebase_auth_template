@@ -71,13 +71,15 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       height: 60.0,
                     ),
                   ),
-                  TypewriterAnimatedTextKit(
-                    text: ['My App Name'],
-                    textStyle: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40.0,
-                      fontWeight: FontWeight.w900,
-                    ),
+                  AnimatedTextKit(
+                    animatedTexts: [
+                      TyperAnimatedText('My App Name',
+                          textStyle: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.w900,
+                          )),
+                    ],
                   )
                 ]),
               ],
