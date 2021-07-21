@@ -63,21 +63,33 @@ packages:
       name: cloud_firestore
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.3.0"
+=======
+    version: "1.0.7"
+>>>>>>> 60aa58f (renamed screen ids)
   cloud_firestore_platform_interface:
     dependency: transitive
     description:
       name: cloud_firestore_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "5.2.0"
+=======
+    version: "4.0.3"
+>>>>>>> 60aa58f (renamed screen ids)
   cloud_firestore_web:
     dependency: transitive
     description:
       name: cloud_firestore_web
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.2.0"
+=======
+    version: "1.0.7"
+>>>>>>> 60aa58f (renamed screen ids)
   collection:
     dependency: transitive
     description:
@@ -91,7 +103,11 @@ packages:
       name: connectivity_plus
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.0.4"
+=======
+    version: "1.0.6"
+>>>>>>> 60aa58f (renamed screen ids)
   connectivity_plus_linux:
     dependency: transitive
     description:
@@ -140,14 +156,22 @@ packages:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.0.3"
+=======
+    version: "0.1.3"
+>>>>>>> 60aa58f (renamed screen ids)
   dbus:
     dependency: transitive
     description:
       name: dbus
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.5.2"
+=======
+    version: "0.5.4"
+>>>>>>> 60aa58f (renamed screen ids)
   fake_async:
     dependency: transitive
     description:
@@ -175,28 +199,44 @@ packages:
       name: firebase_auth
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.0.0"
+=======
+    version: "1.4.1"
+>>>>>>> 60aa58f (renamed screen ids)
   firebase_auth_platform_interface:
     dependency: transitive
     description:
       name: firebase_auth_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "5.0.0"
+=======
+    version: "4.3.1"
+>>>>>>> 60aa58f (renamed screen ids)
   firebase_auth_web:
     dependency: transitive
     description:
       name: firebase_auth_web
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.0.0"
+=======
+    version: "1.3.1"
+>>>>>>> 60aa58f (renamed screen ids)
   firebase_core:
     dependency: "direct main"
     description:
       name: firebase_core
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "1.3.0"
+=======
+    version: "1.4.0"
+>>>>>>> 60aa58f (renamed screen ids)
   firebase_core_platform_interface:
     dependency: transitive
     description:
@@ -217,42 +257,66 @@ packages:
       name: firebase_messaging
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "10.0.3"
+=======
+    version: "9.1.4"
+>>>>>>> 60aa58f (renamed screen ids)
   firebase_messaging_platform_interface:
     dependency: transitive
     description:
       name: firebase_messaging_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "3.0.2"
+=======
+    version: "2.1.4"
+>>>>>>> 60aa58f (renamed screen ids)
   firebase_messaging_web:
     dependency: transitive
     description:
       name: firebase_messaging_web
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.0.2"
+=======
+    version: "1.0.7"
+>>>>>>> 60aa58f (renamed screen ids)
   firebase_storage:
     dependency: "direct main"
     description:
       name: firebase_storage
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "9.0.0"
+=======
+    version: "8.1.3"
+>>>>>>> 60aa58f (renamed screen ids)
   firebase_storage_platform_interface:
     dependency: transitive
     description:
       name: firebase_storage_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "3.0.0"
+=======
+    version: "2.1.2"
+>>>>>>> 60aa58f (renamed screen ids)
   firebase_storage_web:
     dependency: transitive
     description:
       name: firebase_storage_web
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.0.0"
+=======
+    version: "1.1.2"
+>>>>>>> 60aa58f (renamed screen ids)
   flutter:
     dependency: "direct main"
     description: flutter
@@ -281,7 +345,11 @@ packages:
       name: google_sign_in
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "5.0.4"
+=======
+    version: "5.0.5"
+>>>>>>> 60aa58f (renamed screen ids)
   google_sign_in_platform_interface:
     dependency: transitive
     description:
@@ -421,7 +489,11 @@ packages:
       name: normalize
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "0.5.4"
+=======
+    version: "0.5.5"
+>>>>>>> 60aa58f (renamed screen ids)
   path:
     dependency: transitive
     description:
@@ -491,7 +563,7 @@ packages:
       name: plugin_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0"
+    version: "2.0.1"
   process:
     dependency: transitive
     description:
@@ -636,7 +708,11 @@ packages:
       name: win32
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "2.2.4"
+=======
+    version: "2.2.5"
+>>>>>>> 60aa58f (renamed screen ids)
   xdg_directories:
     dependency: transitive
     description:
@@ -653,4 +729,8 @@ packages:
     version: "5.1.2"
 sdks:
   dart: ">=2.13.0 <3.0.0"
+<<<<<<< HEAD
   flutter: ">=1.22.0"
+=======
+  flutter: ">=2.0.0"
+>>>>>>> 60aa58f (renamed screen ids)

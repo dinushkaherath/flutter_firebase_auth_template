@@ -6,7 +6,7 @@ import 'package:firebase_auth_template/widgets/wave.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  static String id = '/welcome';
+  static String id = 'welcome_screen';
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }

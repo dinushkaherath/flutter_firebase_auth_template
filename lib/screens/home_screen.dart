@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 
 class HomeScreen extends StatelessWidget {
-  static String id = '/home';
+  static String id = 'home_screen';
   final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {

@@ -11,7 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../constants.dart';
 
 class LoginScreen extends StatefulWidget {
-  static String id = '/login';
+  static String id = 'login_screen';
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
