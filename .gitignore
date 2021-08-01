@@ -44,5 +44,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Ignore IOS/android secrets
 android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
+
+# Ignore ios build files
+ios/build/XCBuildData
