@@ -124,9 +124,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             .where('id', isEqualTo: firebaseUser.uid)
                             .get();
                         final List<DocumentSnapshot> documents = result.docs;
-                        print(documents[0].data());
-                        await prefs.setString('id', documents[0].data());
-                        await prefs.setString('nickname', documents[0].data());
+                        final Map<String, dynamic> userData =
+                            documents.last.data();
+                        await prefs.setString('id', userData['id']);
+                        await prefs.setString(
+                          'nickname',
+                          userData['nickname'],
+                        );
                         // await prefs.setString(
                         //     'aboutMe', documents[0].data()['aboutMe']);
                         Navigator.pushNamed(context, HomeScreen.id);
@@ -174,7 +178,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     try {
                       final user = await googleSignIn.signIn();
                       if (user != null) {
-                        print(user);
                         final googleAuth = await user.authentication;
 
                         final credential = GoogleAuthProvider.credential(
@@ -190,11 +193,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             .where('id', isEqualTo: firebaseUser.uid)
                             .get();
                         final List<DocumentSnapshot> documents = result.docs;
-                        print(documents[0].data());
-                        await prefs.setString('id', documents[0].data());
+                        final Map<String, dynamic> userData =
+                            documents.last.data();
+                        await prefs.setString('id', userData['id']);
                         await prefs.setString(
                           'nickname',
-                          documents[0].data(),
+                          userData['nickname'],
                         );
                         // await prefs.setString(
                         //     'aboutMe', documents[0].data()['aboutMe']);
